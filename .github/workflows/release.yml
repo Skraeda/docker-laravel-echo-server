@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE: oanhnn/laravel-echo-server
+      DOCKER_IMAGE: skraeda/laravel-echo-server
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -68,7 +68,7 @@ jobs:
           file: ./Dockerfile
           labels: |
             org.opencontainers.image.title='The Laravel Echo Server Docker Image'
-            org.opencontainers.image.authors=oanhnn
+            org.opencontainers.image.authors=skraeda
             org.opencontainers.image.created=${{ steps.prepare.outputs.created }}
             org.opencontainers.image.source=${{ github.repositoryUrl }}
             org.opencontainers.image.version=${{ steps.prepare.outputs.version }}

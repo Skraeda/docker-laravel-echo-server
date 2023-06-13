@@ -1,22 +1,22 @@
 {
   "apiOriginAllow":{
     "allowCors" : true,
-    "allowOrigin" : "LARAVEL_ECHO_ALLOW_ORIGIN",
+    "allowOrigin" : "localhost",
     "allowMethods" : "GET, POST",
     "allowHeaders" : "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
   },
-  "authEndpoint": "LARAVEL_ECHO_AUTH_ENDPOINT",
-  "authHost": "LARAVEL_ECHO_AUTH_HOST",
-  "clients": "LARAVEL_ECHO_CLIENTS",
-  "database": "LARAVEL_ECHO_SERVER_DB",
+  "authEndpoint": "",
+  "authHost": "localhost",
+  "clients": [],
+  "database": "redis",
   "databaseConfig": {
     "redis": {
-      "host": "REDIS_HOST",
-      "port": "REDIS_PORT",
-      "password": "REDIS_PASSWORD",
-      "keyPrefix": "REDIS_PREFIX",
+      "host": "redis",
+      "port": "6379",
+      
+      "keyPrefix": "laravel_database_",
       "options": {
-        "db": "REDIS_DB"
+        "db": "0"
       }
     },
     "sqlite": {

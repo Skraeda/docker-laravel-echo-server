@@ -1,4 +1,4 @@
-# oanhnn/laravel-echo-server
+# skraeda/laravel-echo-server
 
 > **NOTE:** I announce that I will no longer be developing for this project. 
 > Because I switched to using Soketi for my projects. 
@@ -9,8 +9,8 @@ Alpine based [Laravel Echo Server](https://github.com/tlaverdure/laravel-echo-se
 
 > [Tiếng Việt](README-vi.md)
 
-[![Build Status](https://github.com/oanhnn/docker-laravel-echo-server/workflows/CI/badge.svg)](https://github.com/oanhnn/docker-laravel-echo-server/actions)
-[![Software License](https://img.shields.io/github/license/oanhnn/docker-laravel-echo-server.svg)](https://github.com/oanhnn/docker-laravel-echo-server/blob/master/LICENSE)
+[![Build Status](https://github.com/skraeda/docker-laravel-echo-server/workflows/CI/badge.svg)](https://github.com/skraeda/docker-laravel-echo-server/actions)
+[![Software License](https://img.shields.io/github/license/skraeda/docker-laravel-echo-server.svg)](https://github.com/skraeda/docker-laravel-echo-server/blob/master/LICENSE)
 
 ## Features
 
@@ -22,14 +22,14 @@ Alpine based [Laravel Echo Server](https://github.com/tlaverdure/laravel-echo-se
 
 ## Tags
 
-Image `oanhnn/laravel-echo-server`
+Image `skraeda/laravel-echo-server`
 
 - `X.Y.Z`  - the PATH  version (git tag `vX.Y.Z`)
 - `X.Y`    - the MINOR version 
 - `X`      - the MAJOR version
 - `latest` - the latest version
 
-Image `ghcr.io/oanhnn/laravel-echo-server`
+Image `ghcr.io/skraeda/laravel-echo-server`
 
 - `edge`         - the edge version, it is the newest code from branch `master`
 - `nightly`      - the nightly version, it is built daily at 8:20 AM UTC
@@ -47,17 +47,17 @@ Image `ghcr.io/oanhnn/laravel-echo-server`
 Run laravel-echo-server by command
 
 ```bash
-$ docker run -d -p 6001:6001 -v $(pwd):/app oanhnn/laravel-echo-server
+$ docker run -d -p 6001:6001 -v $(pwd):/app skraeda/laravel-echo-server
 ```
 
 
 ### Run laravel-echo-server sub-commands
 
 ```bash
-$ docker run --rm -it -v $(pwd):/app oanhnn/laravel-echo-server init
-$ docker run --rm -it -v $(pwd):/app oanhnn/laravel-echo-server start
-$ docker run --rm -it -v $(pwd):/app oanhnn/laravel-echo-server client:add
-$ docker run --rm -it -v $(pwd):/app oanhnn/laravel-echo-server client:remove
+$ docker run --rm -it -v $(pwd):/app skraeda/laravel-echo-server init
+$ docker run --rm -it -v $(pwd):/app skraeda/laravel-echo-server start
+$ docker run --rm -it -v $(pwd):/app skraeda/laravel-echo-server client:add
+$ docker run --rm -it -v $(pwd):/app skraeda/laravel-echo-server client:remove
 ```
 
 ### Run with docker-compose
@@ -73,7 +73,7 @@ See some examples in `examples` folder.
   please set environment variable `LARAVEL_ECHO_SERVER_GENERATE_CONFIG` to `false` (default `true`).   
   
   ```bash
-  $ docker run -d -p 6001:6001 -v $(pwd):/app -e "LARAVEL_ECHO_SERVER_GENERATE_CONFIG=false" oanhnn/laravel-echo-server
+  $ docker run -d -p 6001:6001 -v $(pwd):/app -e "LARAVEL_ECHO_SERVER_GENERATE_CONFIG=false" skraeda/laravel-echo-server
   ```
 
 
@@ -113,7 +113,7 @@ It can be configured by environment variable `LARAVEL_ECHO_SERVER_DB` (default i
   The SQLite file will store in `/app/database/`
 
   ```bash
-  $ docker run -d -p 6001:6001 -v $(pwd):/app -e "LARAVEL_ECHO_SERVER_DB=sqlite" oanhnn/laravel-echo-server
+  $ docker run -d -p 6001:6001 -v $(pwd):/app -e "LARAVEL_ECHO_SERVER_DB=sqlite" skraeda/laravel-echo-server
   ```
 
 
@@ -142,7 +142,7 @@ See more about environment variables in [here](https://github.com/tlaverdure/lar
 
 > **NOTE** The entrypoint script only support partial for these environment variable overrides.
 > Some environments will support by native laravel-echo-server. It is implemented by code and overrides laravel-echo-server.json
-> See [more](https://github.com/oanhnn/docker-laravel-echo-server/issues/18)
+> See [more](https://github.com/skraeda/docker-laravel-echo-server/issues/18)
 
 ## Contributing
 
@@ -151,10 +151,10 @@ This is to ensure proper review of all the code.
 
 Fork the project, create a feature branch, and send a pull request.
 
-If you would like to help take a look at the [list of issues](https://github.com/oanhnn/docker-laravel-echo-server/issues).
+If you would like to help take a look at the [list of issues](https://github.com/skraeda/docker-laravel-echo-server/issues).
 
 ## License
 
 This project is released under the MIT License.   
-Copyright © 2021 [Oanh Nguyen](https://github.com/oanhnn)   
-Please see [License File](https://github.com/oanhnn/docker-laravel-echo-server/blob/master/LICENSE) for more information.
+Copyright © 2021 [Oanh Nguyen](https://github.com/skraeda)   
+Please see [License File](https://github.com/skraeda/docker-laravel-echo-server/blob/master/LICENSE) for more information.

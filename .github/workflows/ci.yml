@@ -20,7 +20,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE: oanhnn/laravel-echo-server
+      DOCKER_IMAGE: skraeda/laravel-echo-server
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -51,7 +51,7 @@ jobs:
 
       - name: Test with sqlite
         run: |
-          sed -i "s|oanhnn/laravel-echo-server:.*|oanhnn/laravel-echo-server:test|g" ./sqlite.yml
+          sed -i "s|skraeda/laravel-echo-server:.*|skraeda/laravel-echo-server:test|g" ./sqlite.yml
           docker-compose -f sqlite.yml up -d
           sleep 10s
           docker-compose -f sqlite.yml ps
@@ -61,7 +61,7 @@ jobs:
 
       - name: Run with docker
         run: |
-          sed -i "s|oanhnn/laravel-echo-server:.*|oanhnn/laravel-echo-server:test|g" ./redis.yml
+          sed -i "s|skraeda/laravel-echo-server:.*|skraeda/laravel-echo-server:test|g" ./redis.yml
           docker-compose -f redis.yml up -d
           sleep 10s
           docker-compose -f redis.yml ps
@@ -74,7 +74,7 @@ jobs:
     needs: [ 'test' ]
     if: github.event_name != 'pull_request'
     env:
-      DOCKER_IMAGE: ghcr.io/oanhnn/laravel-echo-server
+      DOCKER_IMAGE: ghcr.io/skraeda/laravel-echo-server
     steps:
       - name: Checkout
         uses: actions/checkout@v2
